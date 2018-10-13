@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Google Developer</title>
+<style>
+.frame{
+	width:100%;
+	justify-content:center;
+	align-items:center;
+}
+.right{
+	width:5%;
+	text-align:right;
+	padding-right:200px;
+}
+
+
+nav{
+	display:flex;
+}
+.trigger{
+	display:none;
+}
+.title{
+	margin-right:20px;
+}
+.menu{
+	display:flex;
+}
+.menu>.item{
+	margin:0px 5px;
+}
+@media (max-width:500px){
+	.trigger{
+		display:block;
+	}
+	.menu{
+		display:block;
+		position:fixed;left:-200px;top:0px;
+		width:200px;height:100%;
+		background-color:#dddddd;
+		transition:left 0.5s; 漸變
+	}
+	
+}
+.center{
+	width:100%;
+	height:180px;
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	align-items:center;
+	margin-left:auto;margin-right:auto;
+}
+hr.style-one {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+.frame{
+	display:flex;
+	justify-content:center;
+	align-items:flex-start;
+	/*flex-wrap:wrap;容許換行 width設45%*/
+}
+.frame1{
+	display:flex;
+	justify-content:center;
+	align-items:flex-start;
+	/*flex-wrap:wrap;容許換行 width設45%*/
+}
+/*
+	寬度 >1200px
+	總寬度固定在1200px
+*/
+
+.box{
+	width:100%;margin:10px;
+	background-color:white;	
+}
+/*
+	階層是選擇器,搭配其他選擇器使用
+	外層選擇器>內層選擇器{}
+*/
+.box>img{
+	width:100%;
+}
+/*CSS Media Query*/
+@media (max-width:1200px){
+	/*如果螢幕小於1200px ,套用這個區塊的設定
+	不須重複寫原本設定,寫要改的部分就好*/
+	.frame{
+		flex-wrap:wrap
+	}
+	.frame1{
+		flex-wrap:wrap
+	}
+	.box{
+		width:45%
+	}
+}
+@media (max-width:500px){
+	/*如果螢幕小於500px ,套用這個區塊的設定
+	不須重複寫原本設定,寫要改的部分就好*/
+	.title{
+		font-size:24px;
+	}
+	.box{
+		width:90%/*通常不會拉滿*/
+	}
+	.menu-desktop{
+	display:none;
+	}
+	.menu-mobile{
+		display:block;
+	}
+
+}
+
+</style>
+<script>
+function showMenu(){
+	let menu=document.querySelector(".menu");
+	menu.style.left="0px";
+}
+function hideMenu(){
+	let menu=document.querySelector(".menu");
+	menu.style.left="-200px";
+}
+</script>
+</head>
+<body style="font-family:Microsoft JhengHei;">
+	<div class="frame">
+		<nav>
+			<div onclick="showMenu();" class="trigger"><img src="menu.png"></img></div>
+			<div class="icon"><img src="https://ams90102.github.io/logo.png" width="45%"></div>
+			<div class="menu" id="menu" onmouseleave="hideMenu();">
+				<div class="item">Products</div>
+				<div class="item">Events</div>
+				<div class="item">Developer Programs</div>
+				<div class="item">blog</div>
+			</div>
+			
+			<div class=""><img src="menu1.png"></div>
+			<div class="right"><img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=64" width="45%" style="border-radius:30px;margin-left:1px;" ></div>
+		</nav>
+	</div>
+	<hr></hr>
+	<div class="center">
+		<div><font size="8px ;;" >Build anything with Google</font></div>
+	</div>
+	<hr class="style-one"></hr>		
+	</div>
+	<dir  style="background-color: #f7f7f7;">
+	<dir><h1>Events</h1></dir>
+	<div class="frame">
+	
+		<div class="box">
+			<img src="https://lh3.googleusercontent.com/jmwjBjgTSxB4fVs__fXwxhd0YKoI7yRI3hmMdmiAqtZf6PO5etRzcX_iJWGLYuqTNxVgCJ4GybyGoqhIdJt07ByyOSFTWgQ=s688" width="50%">
+			<div style="font-size:24px;color:#039be5;padding: 16px;line-height: 30px;">Firebase Summit 2018 October 29 | Prague, Czech Republic</div>
+			<div>Join us to learn how Firebase helps mobile app teams of all sizes across the entire development lifecycle.<br><br>#FirebaseSummit</div>
+		</div>
+		<div class="box">
+			<img src="https://lh3.googleusercontent.com/F2WJiUHknjkTfgnPC7r2C1wHjiuO1dlQTFW9iPuDG9LyjE_Y3Q3sW6cazivLQyjT9w4hO9VmolKvh2eeqLeJnwqeUpS3eg=s688" width="50%">
+			<div style="font-size:24px;color:#039be5;padding: 16px;line-height: 30px;">Android Dev Summit 2018 November 7-8 | Mountain View, USA</div>
+			<div>Two days of networking and deep technical sessions with the Android engineering team.<br><br>#AndroidDevSummit</div>
+		</div>
+	</div>	
+	</dir>	
+	<dir  style="background-color: #ffffff;">
+	<dir><h1>News</h1></dir>
+	<div class="frame1">
+		<div class="box">
+			<img src="https://lh3.googleusercontent.com/FyZA5SbKPJA7Y3XCeb9-uGwow8pugxj77Z1xvs8vFS6EI3FABZDCDtA9ScqzHKjhU8av_Ck95ET-P_rPJCbC2v_OswCN8A=s688" width="50%">
+			<div style="font-size:24px;color:#039be5;padding: 16px;line-height: 30px;">Google I/O Sessions</div>
+			<div>If you didn't have a chance to attend all of your favorite talks, or you want to refresh what you learned at the conference, you can (re)watch recordings of the Keynotes and Sessions on the I/O website at your convenience.
+We'd love your feedback so we can continue to tailor our content to your needs in future years! To rate a Session you attended and/or watched, sign-in on the I/O website, click on it from the main schedule page, and click the blue Rate session button.</div>
+		</div>
+		<div class="box">
+			<img src="https://lh3.googleusercontent.com/0Q7Wp6Zn1rbnVnqFZziD4iZl0pN5AHDY2tkqG26BwBH9saMrLBvOtjQiiJQFUJxHcOBhSJ0mHDIdHqlBa8FTiASfW1Gkw2gf=s688" width="50%">
+			<div style="font-size:24px;color:#039be5;padding: 16px;line-height: 30px;">A guide to the Google Play Console</div>
+			<div>Whether you’re in a business or technical role or on a team of 1 or 100, the Play Console can help you with more than publishing. This tour of Play Console introduces its many features that can help you improve app quality and business performance.</div>
+		</div>
+	</div>
+	
+	<div class="frame1">
+	
+		<div class="box">
+			<iframe width="472" height="266" src="https://www.youtube.com/embed/PingeD_5yPQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<div style="font-size:24px;color:#039be5;padding: 16px;line-height: 30px;">Celebrating app makers worldwide</div>
+			<div>Developers, founders, product managers, designers, and others reveal what they do when they step away from their computers.
+					Discover their dreams, passions, and who they are as people.</div>
+		</div>
+		<div class="box">
+			<iframe width="472" height="266" src="https://www.youtube.com/embed/ua4QGWmDfB8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<div style="font-size:24px;color:#039be5;padding: 16px;line-height: 30px;">Google Assistant developer community program</div>
+			<div>When you publish an Action for the Google Assistant, you’ll be invited to join our developer community program and receive an Assistant t-shirt, plus up to $200 in Google Cloud credit each month for one year. Hit certain product milestones and you’ll be eligible for Google Home devices, invitations to exclusive events, mentorship by Googlers, and other rewards!</div>
+		</div>
+	</div>
+	</dir>
+	<div class="center3">
+		
+	</div>
+	<div class="buttom">
+	</dir>
+</body>
+
+</html>
