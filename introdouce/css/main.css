@@ -1,0 +1,86 @@
+@import './reset.css';
+body{
+	font-family: Microsoft JhengHei;
+}
+.menu{
+     height: 100vh;
+     width: 300px;
+     background-color: #F2DB86;
+     float: left;
+}
+.menu .title .min_picture { 
+     background: url(https://nick-intl.mtvnimages.com/uri/mgid:file:gsp:kids-assets:/nick/properties/spongebob-squarepants/characters/spongebob-about-web-desktop.jpg?quality=0.75&height=460&width=460&matte=true&crop=true) no-repeat;
+     background-size: 70px auto;
+     height: 70px;
+     width: 70px;
+     border-radius: 50px;
+	 display: inline-block;
+ }
+ .menu .title span {
+    font-size: 2em;
+    color: #F6CE3B;
+    margin-left: 20px;
+}
+
+.menu ul li {
+    font-size: 1.3em;
+    font-width:300;
+    padding: 10px 30px;
+    color: #385DAA;
+	transition: 0.25s;
+}
+.menu ul li:hover {
+    background-color: #5A66B4;
+    color: #F8DC3D;
+}
+.title {
+
+	 padding:20px 15px;
+     /*設定底色為#4A4A4A*/
+     background-color: #385DAA;
+ }
+.content {
+	width: 100vw;
+    height: 100vh;
+}
+.content .banner {
+     width: 100%;/*設定寬度為100%*/
+     height: 300px;/*設定高度為300px*/
+     background-color: #1D1456;
+	 background-size:contain;
+ }
+.content .banner div {
+    color: #fff;
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+}
+.div{
+	margin-top:75px;
+	margin-left:100px;
+}
+.content .banner .picture{
+	background: url(https://nick-intl.mtvnimages.com/uri/mgid:file:gsp:kids-assets:/nick/properties/spongebob-squarepants/characters/spongebob-about-web-desktop.jpg?quality=0.75&height=460&width=460&matte=true&crop=true) no-repeat;
+     background-size: 150px auto;
+     height: 150px;
+     width: 150px;
+     border-radius: 150px;
+	 display: inline-block;
+}
+
+.content .news div{
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+ }
+.article{
+	margin-top:75px;
+	margin-left:100px;
+}
+.article ul li{
+	padding:5px;
+	margin-top:2px;
+	border-radius: 5px;
+	background-color:#DCDCDC;
+	color:#808080;
+}
