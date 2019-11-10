@@ -164,7 +164,7 @@ a{
 	margin-top: 40%;
 }
 
-@media (min-width:48em){
+@media only screen and (min-width:48em){
 
     .header li{
         float:left;
